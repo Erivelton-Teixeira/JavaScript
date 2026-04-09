@@ -31,5 +31,5 @@ Entrada --> Processamento --> Saída
 | /= | Divifir e atribuir | x /= 2 | 10 |
 | ++ | Somar 1 ao resultado | x++ | 11 |
 | -- | Subtrair 1 do resultado | x-- | 10 |
-| % | Resto da  divisão | 9 % 3 | 0 |
+| % | Resto da  divisão | 10 % 3 | 1 |
 
