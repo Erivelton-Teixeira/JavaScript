@@ -1,0 +1,29 @@
+/**
+ * Calculo da media de 2 notas
+ * Exemplod e uso da biblioteca promt-sync
+ * @author Erivelton Teixeira
+ */
+//alinha baixo importa a biblioteca
+const prompt = require('prompt-sync')()
+
+//variaveis
+let disciplina, nota1, nota2, media
+
+console.clear()
+console.log("Cálculo da média de 2 notas")
+
+//entrada de dados
+disciplina = prompt("Digite o nome da disciplina: ")
+console.log(disciplina)
+console.log(typeof(disciplina))
+// console.log(nota1)
+//number()converte para o tipo numerico
+nota1 = Number(prompt("Digite a nota 1: "))
+console.log(nota1)
+console.log(typeof(nota1))
+nota2 = Number (prompt("Digite a nota 2: "))
+console.log(nota2)
+console.log(typeof(nota2))
+
+media = (nota1 + nota2) / 2
+console.log(`Media: ${media.toFixed(1)}`)
