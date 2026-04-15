@@ -33,3 +33,20 @@ Entrada --> Processamento --> Saída
 | -- | Subtrair 1 do resultado | x-- | 10 |
 | % | Resto da  divisão | 10 % 3 | 1 |
 
+## Operadores lógicos
+| Operador | Simbologia |
+|----------|------------|
+| AND | && |
+| OR | \|\| |
+| NOT | ! |
+
+## Comparadores
+| Comparador | Significado |
+|------------|-------------|
+| > | Maior   que |
+| >= | Maior ou igual a |
+| < | Menor ou igual a |
+| === | Idêntico a |
+| !== | Não identico a |
+
+
