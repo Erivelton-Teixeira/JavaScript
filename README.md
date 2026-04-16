@@ -54,7 +54,14 @@ Entrada --> Processamento --> Saída
 ### Estrutura de controles condicionais
 
 ```javascript
-if (condição){
+if (condição) {
 // condição verdadeira
 }
+
+if (condição) {
+// condição verdadeira
+} else {
+//condição falsa
+}
+
 ```
