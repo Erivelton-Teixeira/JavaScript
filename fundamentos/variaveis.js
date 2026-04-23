@@ -8,6 +8,7 @@ console.log ("Estudo das variáveis")
 console.log("")
 console.log("Varial do tipo String")
 // a linha abaixo cria uma variável
+let imc
 let nome = "Erivelton Teixeira"
 console.log(nome)
 //a linha abaixo mosta um tipo de variavel
@@ -43,6 +44,22 @@ console.log(`peso : ${peso}Kg`)
 console.log(`altura: ${altura}`)
 console.log(`vip : ${vip}`)
 console.log(`FCM : ${208 - (0.7 * idade)} bmp`)
+
+if (imc < 18.5) {
+    console.log('Você está abaixo do peso.')
+} else if ( imc < 24.9) {
+    console.log('Você está com peso normal.')
+} else if (imc < 29.9) {
+    console.log('Você está levemente acima do peso.')
+} else if (imc < 34.9) {
+    console.log('Obesidade grau I.')
+} else if (imc < 39.9) {
+    console.log('Obesidade grau II (Severa).')
+} else {
+    console.log('Obesidade grau III (Mórbida).')
+}
+ 
+
 // .toFied (2) formata o resultado em 2 casas decimais
 console.log(`IMC : ${(peso / (altura * altura)).toFixed(2)} `)
 
