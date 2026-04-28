@@ -8,20 +8,24 @@
 const prompt = require('prompt-sync')()
 //variaveis
 let jogador, maquina
-
+let novoJogo = "n"
+do {
 //UX
+console.clear()
 console.log("     ██  ██████  ██   ██ ███████ ███    ██ ██████   ██████  ")
 console.log("     ██ ██    ██ ██  ██  ██      ████   ██ ██   ██ ██    ██ ")
 console.log("     ██ ██    ██ █████   █████   ██ ██  ██ ██████  ██    ██ ")
 console.log("██   ██ ██    ██ ██  ██  ██      ██  ██ ██ ██      ██    ██ ")
 console.log(" █████   ██████  ██   ██ ███████ ██   ████ ██       ██████  ")
 
+console.log("")
 //Logica do jogador
+
 console.log("1- Pedra")
 console.log("2- Papel")
 console.log("3- Tesoura")
-
-jogador = Number(prompt("Digite um numero!"))
+console.log("")
+jogador = Number(prompt("Digite um numero! :"))
 console.log()
 switch (jogador) {
     case 1:
@@ -66,6 +70,10 @@ else {
     console.log('Voce perdeu')
 
 }
+novoJogo = prompt("Deseja johar novamente (s/n) ")
+} while(novoJogo === "s" || novoJogo === "S")
+
+
 
 
 
