@@ -4,14 +4,13 @@
  */
 
 
-// Importação de pacote
+// importação de pacote
 const prompt = require('prompt-sync')()
-
-//variaveis globais
+ 
+//variáveis globais
 let num1, num2, opcao, resultado
-
-// Funções das operações (com parâmetros) recomendado antes da função principal
-
+ 
+//Funções das operações (com parâmetros)
 function somar(num1, num2) {
     return num1 + num2
 }
@@ -21,32 +20,34 @@ function subtrair(num1, num2) {
 function multiplicar(num1, num2) {
     return num1 * num2
 }
-function raizQuadrada(num1) {
-    return Math.sqrt(num1);
-}
 function dividir(num1, num2) {
-    //validação
+    //valiodação
     if (num1 === 0) {
-        console.log("Impossivel dividir por 0")
+        console.log("Erro! Impossível dividir por 0")
     } else {
         return num1 / num2
-
     }
 }
-
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//Função principal (main)
+function raizQuadrada(num1) {
+    return Math.sqrt(num1)
+}
+function porcentagem(valor, porcento) {
+    return (valor * porcento) / 100
+}
+ 
+ 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Função princial (main)
 function iniciarCalculadora() {
-    // Gerando um loop infinito (UX)
+    ;//gerando um loop infinito
     do {
-        mostrarMmenu()
-        //Escolha da opçao
+        mostrarMenu()
+        //escolha da opção
         opcao = Number(prompt("Escolha uma opção: "))
         switch (opcao) {
             case 0:
-                console.log("Calculadora encerrada")
-                return //Encerra o loop infinito
+                console.log("Calculadora encerrada.")
+                return //encerra o loop infinito
             case 1:
                 num1 = Number(prompt("Digite o primeiro número: "))
                 num2 = Number(prompt("Digite o segundo número: "))
@@ -68,32 +69,39 @@ function iniciarCalculadora() {
                 resultado = dividir(num1, num2)
                 break
             case 5:
-                num1 = Number(prompt("Digite o valor: "))
+                num1 = Number(prompt("Digite o Valor: "))
                 resultado = raizQuadrada(num1)
+                break
+            case 6:
+                num1 = Number(prompt("Digite o valor: "))
+                num2 = Number(prompt("Digite a porcentagem (%): "))
+                resultado = porcentagem(num1, num2)
                 break
             default:
                 console.log("Opção invalida")
                 prompt("Precione [Enter] para continuar")
-                continue //continua dentro do switch case
+                continue//continue dentro do switch case
         }
-        //Exibir o resultado
-        console.log(`Resultado : ${resultado.toFixed(2)}`)
-        prompt("Precione [Enter] para continuar")
+        //exibir o resultado
+        console.log(`Resultado: ${resultado.toFixed(2)}`)
+        prompt("Precione o [Enter] para continuar")
     } while (true)
-
 }
+ 
+ 
+ 
+ 
 //Função menu
-function mostrarMmenu() {
+function mostrarMenu() {
     console.clear()
-    console.log("Calculadora JS")
-    console.log("1. Somar")
-    console.log("2. Subtrair")
-    console.log("3. Multiplicar")
-    console.log("4. Divisão")
-    console.log("5. Raiz quadrada")
-    console.log("0. Sair")
+    console.log("=== Calculadora JS ===")
+    console.log("1.Somar")
+    console.log("2.Subtrair")
+    console.log("3.Multiplicar")
+    console.log("4.Dividir")
+    console.log("5.Raiz quadrada")
+    console.log("6.Porcentagem")
+    console.log("0.Sair")
 }
-
 //Executar a função principal
-
 iniciarCalculadora()
