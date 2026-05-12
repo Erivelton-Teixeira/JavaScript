@@ -74,7 +74,7 @@ function iniciarCalculadora() {
                 break
             case 6:
                 num1 = Number(prompt("Digite o valor: "))
-                num2 = Number(prompt("Digite a porcentagem (%): "))
+                num2 = Number(prompt("Digite a porcentagem %: "))
                 resultado = porcentagem(num1, num2)
                 break
             default:
